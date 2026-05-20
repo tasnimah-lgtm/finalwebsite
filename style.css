@@ -1,0 +1,47 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Styling */
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f1ea;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+header{
+    height: 100vh;
+    background-image: url("img/tulips.jpeg");
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+/* Dark overlay effect */
+header::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(80, 209, 175, 0.4);
+}
+
+header h1,
+header p,
+header a{
+    position: relative;
+    z-index: 1;
+}
+
+ 
