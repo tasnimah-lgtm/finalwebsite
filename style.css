@@ -295,8 +295,38 @@ header p{
         border: none;
     }
 
+    main{
+        width: 95%;
+    }
+
+    .city-section{
+        width: 95%;
+        padding: 20px;
+        margin: 25px auto;
+    }
+
     .about-card{
+        width: 95%;
+        padding: 20px;
+        gap: 15px;
+
         flex-direction: column;
         text-align: center;
     }
+
+    .about-text p,
+    .city-section p,
+    .city-section li{
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}
+
+
+#skip:focus{
+    top: 10px;
+    left: 10px;
+    background: white;
+    padding: 10px;
+    z-index: 1000;
 }
