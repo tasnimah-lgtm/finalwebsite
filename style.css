@@ -1,93 +1,24 @@
-/* Reset */
- @font-face {
-    font-family: "Darling Coffee";
-    src: url("fonts/darling_cofee coffee/DarlingCoffee.ttf");
-}
-
 #skip{
-position:absolute;
-top: -100px;
-
+    position:absolute;
+    top: -100px;
 }
 
-
+/* RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Page Styling */
+/* PAGE BASE */
 body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f5ebf2;
     color: #333;
     line-height: 1.6;
 }
 
-/* Hero Section */
-header{
-    height: 100vh;
-    background-image: url("img/tulips.jpeg");
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-    color: white;
-
-    position: relative;
-}
-
-/* Dark overlay effect */
-header::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(80, 209, 175, 0.4);
-}
-
-/* Keeps text above overlay */
-header h1,
-header p,
-header a{
-    position: relative;
-    z-index: 1;
-}
-header{
-    height: 100vh;
-
-    background-image: url("img/tulips.jpeg");
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-    color: white;
-
-    position: relative;
-
-    /* THIS is the frame */
-    margin: 100px;
-    border: 30px solid white;
-    box-shadow: 0 30px 50px rgba(240, 239, 239, 0.25);
-}
-
-header p{
-    font-size: 1.3rem;
-}
-
-
-
-/* Navigation */
+/* NAVIGATION */
 nav{
     background-color: white;
     padding: 15px;
@@ -100,7 +31,7 @@ nav ul{
 
 nav li{
     display: inline-block;
-    margin: 20 20px;
+    margin: 20px 20px;
 }
 
 nav a{
@@ -109,14 +40,96 @@ nav a{
     font-weight: bold;
 }
 
-/* Main content */
+/* MAIN LAYOUT */
 main{
     width: 80%;
     margin: auto;
     padding: 40px 0;
 }
 
-/* Gallery section */
+/* HERO BASE */
+header{
+    height: 100vh;
+
+    background-image: url("img/tulips.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: rgb(16, 16, 16);
+
+    position: relative;
+
+    margin: 100px;
+     
+    box-shadow: 0 30px 50px rgba(240, 239, 239, 0.25);
+}
+
+/* HERO OVERLAY */
+header::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(80, 209, 175, 0.4);
+}
+
+/* HERO TEXT ABOVE OVERLAY */
+header h1,
+header p,
+header a{
+    position: relative;
+    z-index: 1;
+}
+
+header p{
+    font-size: 1.3rem;
+}
+
+
+
+/* ABOUT SECTION */
+.about-card{
+    background: white;
+    width: 90%;
+    max-width: 900px;
+
+    margin: 40px auto;
+    padding: 25px;
+
+    display: flex;
+    gap: 25px;
+    align-items: center;
+
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+    flex-wrap: wrap;
+}
+
+.about-card img{
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-text{
+    flex: 1;
+    min-width: 250px;
+}
+
+.about-text p{
+    line-height: 1.7;
+    word-wrap: break-word;
+}
+
+/* HOMEPAGE GALLERY */
 .homepage-gallery{
     text-align: center;
     padding: 40px;
@@ -130,121 +143,112 @@ main{
     margin-top: 20px;
 }
 
-
-.about-card{
-    background: white;
-
-    width: 80%;
-    margin: 40px auto;
-
-    padding: 20px;
-
-    display: flex;
-    align-items: center;
-    gap: 25px;
-
-    border-radius: 10px;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.about-card img{
-    width: 300px;
-    height: 300px;
-
-    object-fit: cover;
-
-    border-radius: 10px;
-}
-
-.about-text{
-    flex: 1;
-}
-
-.about-text h2{
-    margin-bottom: 10px;
-}
- /* Polaroid style photos */
 .gallery img{
     width: 300px;
     height: 300px;
-
     object-fit: cover;
 
     background: rgb(246, 245, 245);
     padding: 12px 12px 40px 12px;
 
     border-radius: 4px;
-
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 
     transition: 0.3s;
 }
 
-/* Slight scrapbook rotation */
-.gallery img:nth-child(1){
-    transform: rotate(-3deg);
-}
+.gallery img:nth-child(1){ transform: rotate(-3deg); }
+.gallery img:nth-child(2){ transform: rotate(2deg); }
+.gallery img:nth-child(3){ transform: rotate(-2deg); }
 
-.gallery img:nth-child(2){
-    transform: rotate(2deg);
-}
-
-.gallery img:nth-child(3){
-    transform: rotate(-2deg);
-}
-
-/* Hover effect */
 .gallery img:hover{
     transform: scale(1.03);
 }
- 
+
+/* CITY SECTIONS */
+.city-section{
+    max-width: 850px;
+    margin: 50px auto;
+
+    padding: 25px 30px;
+    background: #ffffff;
+
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+    border: 1px solid rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.city-header{
+    height: 100vh;
+
+    background-image: url("img/tulips.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    position: relative;
+
+    margin: 100px;
+    border: 30px solid white;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.25);
+
+    
+}
+.city-section h2{
+    margin-bottom: 10px;
+}
+
+.city-section p,
+.city-section li{
+    line-height: 1.7;
+    font-size: 16.5px;
+}
+
+.city-list li::before{
+    content: "★ ";
+    color: #5c8d7b;
+}
+
+/* TABS */
+.city-tabs{
+    justify-content: center !important;
+}
 
 .city-tabs .nav-link{
     margin-left: 15px;
-
     margin-top: 40px;
-    
 
     border-radius: 20px;
-
     padding: 10px 18px;
 
     background-color: rgba(249, 252, 251, 0.901);
+    color: rgb(16, 19, 20);
 
-    color: rgb(20, 16, 16);
-
-    border: 1px solid rgba(255,255,255,0.3);
-
+    border: 1.5px solid black !important;
     transition: 0.3s;
-
-   
 }
 
-/* hover */
 .city-tabs .nav-link:hover{
-    background-color: rgb(194, 247, 227);
-    color: #333;
+    background-color: rgb(125, 220, 239) !important;
+    color: #333 !important;
 }
 
-/* active tab */
 .city-tabs .nav-link.active{
     background-color: white;
     color: #333;
     border: 1px solid white;
 }
-  
-@media screen and (min-width:772px){
-    body{
-        background-color: rgb(239, 239, 244);
-    }
-    #skip:focus{
-        z-index: 100;
-        top:10px;
-        border: 3px solid yellow;
-    }
-}
 
+/* PHOTO GALLERY */
 .photo-gallery{
     padding: 50px;
     text-align: center;
@@ -252,24 +256,11 @@ main{
 
 .gallery-grid{
     display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: 30px;
-
-    margin-top: 30px;
-}
- 
-  
-
-.gallery-grid{
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     margin-top: 30px;
 }
 
-/* FULL POLAROID CARD */
 .polaroid{
     background: white;
     padding: 12px 12px 20px 12px;
@@ -280,7 +271,6 @@ main{
     flex-direction: column;
 }
 
-/* IMAGE */
 .polaroid img{
     width: 100%;
     height: 200px;
@@ -288,7 +278,6 @@ main{
     display: block;
 }
 
-/* CAPTION INSIDE FRAME */
 .polaroid p{
     margin: 12px 0 0 0;
     font-size: 14px;
@@ -296,4 +285,18 @@ main{
     text-align: center;
 }
 
- 
+/* MOBILE */
+@media (max-width: 768px){
+
+    header,
+    .city-header{
+        height: 70vh;
+        margin: 0;
+        border: none;
+    }
+
+    .about-card{
+        flex-direction: column;
+        text-align: center;
+    }
+}
