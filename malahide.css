@@ -8,7 +8,7 @@
     background-image: url("img/mushroom.jpeg");
     background-size: cover;
     background-position: center;
-
+     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,26 +26,30 @@
     
 }
 
-@media (max-width: 768px){
+ header,
+.city-header{
+    height: 70vh;
+    margin: 0;
+    border: none;
+}
 
-    header,
-    .city-header{
-        height: 70vh;
-        margin: 0;
-        border: none;
-    }
+.about-card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
 
-    .about-card{
-        flex-direction: column;
-        text-align: center;
-    }
+.city-section{
+    margin: 20px auto;
+    padding: 20px;
+    width: min(95%, 850px);
+}
 
-    .city-section{
-        margin: 20px;
-        padding: 20px;
-    }
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
 
-    .gallery-grid{
-        grid-template-columns: 1fr;
-    }
-} 
+

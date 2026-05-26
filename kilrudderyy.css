@@ -1,7 +1,12 @@
+.kilbury {
+    background-image: url("img/castle2.jpeg");
+}
+
 .city-header{
+    position: relative;
     height: 100vh;
 
-    background-image: url("img/bikes.jpeg");
+    background-image: url("img/castle2.jpeg");
     background-size: cover;
     background-position: center;
 
@@ -9,39 +14,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-     background-color: black;
+    background-color: black;
     text-align: center;
-    color: white;
+    color: rgb(246, 245, 245);
 
-    position: relative;
-
-    margin: 100px;
-    border: 30px solid white;
-    box-shadow: 0 30px 50px rgba(0,0,0,0.25);
-
-    
+    overflow: hidden;
 }
 
+/* dark overlay for contrast */
+.city-header::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 0;
+}
+
+/* text ABOVE overlay */
+.city-header h1,
+.city-header p{
+    position: relative;
+    z-index: 1;
+}
 
 .city-header::before{
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 6, 11, 0.324);
 }
-
-
-
- 
-.city-section h2{
-    color: #321f70;
-    margin-bottom: 10px;
-    margin: 20px auto;
-    padding: 20px;
-    width: min(95%, 850px);
-
-}
-
 
 header,
 .city-header{
@@ -55,6 +56,12 @@ header,
     flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
+}
+
+.city-section{
+    margin: 20px auto;
+    padding: 20px;
+    width: min(95%, 850px);
 }
 
 .gallery-grid{
